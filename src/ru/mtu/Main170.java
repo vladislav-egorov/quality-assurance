@@ -17,12 +17,16 @@ public class Main170 {
         List<Integer> list = generateListByRange(1000, 555555);
         System.out.println(list);
         List<Integer> cleanedList = cleanIntList(list);
-        System.out.println(cleanedList);
+        if (cleanedList.size() == 0) {
+            System.out.println("Требуемых чисел нет");
+        } else {
+            System.out.println(cleanedList);
+        }
     }
 
     /**
      * @param list с элементами, которые нужно отфильтровать
-     * @return список чисел, у которых совпадают первые 3 и последние 3 цифры
+     * @return список чисел, у которых совпадают суммы первых 3 и последних 3 цифр
      */
     private static List<Integer> cleanIntList(List<Integer> list) {
         return list.stream().filter(integer ->
@@ -31,7 +35,7 @@ public class Main170 {
     }
 
     /**
-     * @param low нижняя границы диапазона (включительно)
+     * @param low  нижняя границы диапазона (включительно)
      * @param high верхняя границы диапазона (включительно)
      * @return
      */

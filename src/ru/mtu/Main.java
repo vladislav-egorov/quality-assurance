@@ -47,7 +47,6 @@ public class Main {
     public static void printMatrix(int mat[][]) {
         for (int[] row : mat) {
             System.out.println(Arrays.toString(row));
-
         }
         System.out.println("\n");
     }
